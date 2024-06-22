@@ -1,0 +1,15 @@
+{
+    "name": "cs326_project",
+    "version": "1.0.0",
+    "description": "Club Activity Tracker",
+    "main": "src/frontend/app.js",
+    "scripts": {
+        "start": "http-server src/frontend -p 3000 -c-1 -o -s"
+    },
+    "author": "CHUNG SHUN KO <chungshunko@umass.edu>",
+    "license": "ISC",
+    "dependencies": {
+        "http-server": "^0.12.3"
+    },
+    "keywords": []
+}
