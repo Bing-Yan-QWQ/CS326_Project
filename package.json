@@ -4,7 +4,7 @@
     "description": "Club Activity Tracker",
     "main": "src/frontend/app.js",
     "scripts": {
-        "start": "http-server src/frontend -p 3000 -c-1 -o -s"
+        "start": "http-server src/frontend -p 3010 -c-1 -o -s"
     },
     "author": "CHUNG SHUN KO <chungshunko@umass.edu>",
     "license": "ISC",

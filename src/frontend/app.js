@@ -1,27 +1,40 @@
+// switch view
 function showView(viewId) {
     const views = document.querySelectorAll('.view');
     views.forEach(view => {
         view.style.display = 'none';
     });
     document.getElementById(viewId).style.display = 'block';
+    if (viewId === 'home') {
+        loadClubs();
+    }
 }
 
-// Init APP
-function initApp() {
-    //load usr data
-    const user = JSON.parse(localStorage.getItem('user')) || { name: 'Guest' };
-    document.getElementById('profile').innerHTML = `<h2>Profile</h2><p>Welcome, ${user.name}</p>`;
 
-    // EL Test
-    document.getElementById('testButton')?.addEventListener('click', function() {
-        alert('Button clicked!');
+function loadClubs() {
+    const clubsActivitiesContainer = document.getElementById('clubsActivities');
+    clubsActivitiesContainer.innerHTML = '';
+    const clubs = JSON.parse(localStorage.getItem('clubs')) || [];
+    clubs.forEach(club => {
+        const clubDiv = document.createElement('div');
+        clubDiv.className = 'club-activity';
+        clubDiv.onclick = () => viewDetails(club.name);
+        clubDiv.innerHTML = `
+            <img src="${club.image || 'https://github.com/Bing-Yan-QWQ/CS326_Project/blob/main/no-image-available-icon-vector.jpg'}" alt="${club.name}">
+            <h3>${club.name}</h3>
+            <p>${club.description}</p>
+        `;
+        clubsActivitiesContainer.appendChild(clubDiv);
     });
 }
 
-// Save
-function saveUserData(user) {
-    localStorage.setItem('user', JSON.stringify(user));
-}
+// init
+window.onload = () => {
+    loadClubs();
+};
 
-// Init load
-window.onload = initApp;
+
+function viewDetails(name) {
+    localStorage.setItem('currentClub', name);
+    window.location.href = 'clubPage.html';
+}

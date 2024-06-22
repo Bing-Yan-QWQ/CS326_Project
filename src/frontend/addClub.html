@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Club/Activity - Club Activity Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Club Activity Tracker</h1>
+        <nav>
+            <button onclick="location.href='mainPage.html'">Home</button>
+        </nav>
+    </header>
+    <main>
+        <section id="addClub" class="view">
+            <h2>Add Club/Activity</h2>
+            <form id="addClubForm">
+                <label for="clubNameInput">Name: </label>
+                <input type="text" id="clubNameInput" name="clubName">
+                <br>
+                <label for="clubImageInput">Image URL: </label>
+                <input type="text" id="clubImageInput" name="clubImage">
+                <br>
+                <label for="discordLinkInput">Discord Link: </label>
+                <input type="text" id="discordLinkInput" name="discordLink">
+                <br>
+                <label for="instagramLinkInput">Instagram Link: </label>
+                <input type="text" id="instagramLinkInput" name="instagramLink">
+                <br>
+                <button type="button" onclick="addClub()">Add Club/Activity</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Club Activity Tracker</p>
+    </footer>
+    <script src="editBlock.js"></script>
+</body>
+</html>

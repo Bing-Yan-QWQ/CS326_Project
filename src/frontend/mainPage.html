@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page - Club Activity Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Club Activity Tracker</h1>
+        <nav>
+            <button onclick="showView('home')">Home</button>
+            <button onclick="showView('dashboard')">Dashboard</button>
+            <button onclick="location.href='addClub.html'">Add Club/Activity</button>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="view">
+            <h2>Main Page</h2>
+            <div class="clubs-activities" id="clubsActivities">
+                <!-- Club and activity here -->
+            </div>
+        </section>
+        <section id="dashboard" class="view" style="display:none;">
+            <h2>Dashboard</h2>
+            <p>Overview of clubs and activities.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Club Activity Tracker</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -3,35 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Club Activity Tracker</title>
+    <title>Loading - Club Activity Tracker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Club Activity Tracker</h1>
-        <nav>
-            <button onclick="showView('home')">Home</button>
-            <button onclick="showView('dashboard')">Dashboard</button>
-            <button onclick="showView('profile')">Profile</button>
-        </nav>
-    </header>
-    <main>
-        <section id="home" class="view">
-            <h2>Welcome</h2>
-            <p>This is the home page.</p>
-        </section>
-        <section id="dashboard" class="view" style="display:none;">
-            <h2>Dashboard</h2>
-            <p>Overview of clubs and activities.</p>
-        </section>
-        <section id="profile" class="view" style="display:none;">
-            <h2>Profile</h2>
-            <p>User information and joined clubs.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Club Activity Tracker</p>
-    </footer>
-    <script src="app.js"></script>
+    <div class="loading-container">
+        <h1>Loading</h1>
+        <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+    <script>
+        setTimeout(function() {
+            window.location.href = 'mainPage.html';
+        }, 3000);
+    </script>
 </body>
 </html>
