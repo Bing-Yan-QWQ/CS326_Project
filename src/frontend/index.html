@@ -8,12 +8,25 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to the Club Activity Tracker</h1>
+        <h1>Club Activity Tracker</h1>
+        <nav>
+            <button onclick="showView('home')">Home</button>
+            <button onclick="showView('dashboard')">Dashboard</button>
+            <button onclick="showView('profile')">Profile</button>
+        </nav>
     </header>
     <main>
-        <section>
-            <p>Test here</p>
-            <button id="testButton">Click Me</button>
+        <section id="home" class="view">
+            <h2>Welcome</h2>
+            <p>This is the home page.</p>
+        </section>
+        <section id="dashboard" class="view" style="display:none;">
+            <h2>Dashboard</h2>
+            <p>Overview of clubs and activities.</p>
+        </section>
+        <section id="profile" class="view" style="display:none;">
+            <h2>Profile</h2>
+            <p>User information and joined clubs.</p>
         </section>
     </main>
     <footer>

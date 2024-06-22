@@ -14,6 +14,23 @@ header {
     text-align: center;
 }
 
+header nav {
+    margin-top: 1rem;
+}
+
+header nav button {
+    padding: 0.5rem 1rem;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+
+header nav button:hover {
+    background-color: #005bb5;
+}
+
 main {
     flex: 1;
     padding: 2rem;
@@ -26,14 +43,10 @@ footer {
     padding: 1rem;
 }
 
-button {
-    padding: 0.5rem 1rem;
-    background-color: #0066cc;
-    color: white;
-    border: none;
-    cursor: pointer;
+.view {
+    display: none;
 }
 
-button:hover {
-    background-color: #005bb5;
+.view#home {
+    display: block;
 }
